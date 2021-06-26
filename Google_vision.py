@@ -70,7 +70,7 @@ def generate_annotations(input_file, output_file):
             if corner.y > max_y:
                 max_y = corner.y
         
-        # Calculate the center, width and height of the box
+        # Calculate the coordinates, width and height of the box
         box_width = max_x - min_x
         box_height = max_y - min_y
         box_x = min_x
@@ -148,4 +148,4 @@ def convert_annotations(input_image, input_annotations, output_file):
 # To Test of the functions, uncomment the following lines
 #file_name = '1193-receipt.jpg'
 #generate_annotations(file_name, 'annotations.csv')
-#convert_annotations('1193-receipt.jpg', 'annotations.csv', 'via_csv.csv')
+#convert_annotations(file_name, 'annotations.csv', 'via_csv.csv')
